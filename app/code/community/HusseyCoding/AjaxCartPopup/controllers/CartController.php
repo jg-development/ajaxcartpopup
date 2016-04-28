@@ -22,7 +22,11 @@ class HusseyCoding_AjaxCartPopup_CartController extends Mage_Checkout_CartContro
         
         $lastmessage = Mage::getSingleton('checkout/session')->getMessages()->getLastAddedMessage();
         $result = $lastmessage->getType() == 'success' ? 'success' : false;
-        
+
+        $translation = array(
+            'close' => $this->__('Close'),
+            'backTo' => $this->__('Back to')
+        );
         $message = '';
         $linktext = '';
         $popuphtml = '';
@@ -62,6 +66,7 @@ class HusseyCoding_AjaxCartPopup_CartController extends Mage_Checkout_CartContro
             'result' => $result,
             'message' => $message,
             'linktext' => $linktext,
+            'translation' => $translation,
             'popuphtml' => $popuphtml,
             'imageurl' => $imageurl,
             'productname' => $productname,

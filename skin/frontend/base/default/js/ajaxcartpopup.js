@@ -117,6 +117,8 @@ var cartpopup = Class.create({
                     var message = contentarray.message;
                     var linktext = contentarray.linktext;
                     var popuphtml = contentarray.popuphtml;
+                    var close = contentarray.translation.close;
+                    var backTo = contentarray.translation.backTo;
                     var itemid = contentarray.itemid;
                     var deleteurl = contentarray.deleteurl;
                     if (contentarray.imageurl) {
@@ -136,9 +138,9 @@ var cartpopup = Class.create({
                         }
                         notice += "<div class=\"ajaxnotice_content\">";
                         if (this.backurl && this.backname) {
-                            notice += "<a class=\"ajaxnotice_back\" href=\"" + this.backurl + "\">< Back to " + this.backname + "</a>";
+                            notice += "<a class=\"ajaxnotice_back\" href=\"" + this.backurl + "\">< " + backTo + " " + this.backname + "</a>";
                         }
-                        notice += "<a class=\"ajaxnotice_close\" href=\"javascript:void(null)\" onclick=\"thiscartpopup.hideNotice()\">CLOSE</a>";
+                        notice += "<a class=\"ajaxnotice_close\" href=\"javascript:void(null)\" onclick=\"thiscartpopup.hideNotice()\">" + close + "</a>";
                         notice += "<div class=\"ajaxnotice_clearer\"></div>";
                         if (!result && this.product) {
                             var errorclass = " ajaxaddfailed";

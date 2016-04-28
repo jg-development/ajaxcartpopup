@@ -34,5 +34,14 @@
                 </args>
             </checkout>
         </routers>
+        <translate>
+            <modules>
+                <HusseyCoding_AjaxCartPopup>
+                    <files>
+                        <default>HusseyCoding_AjaxCartPopup.csv</default>
+                    </files>
+                </HusseyCoding_AjaxCartPopup>
+            </modules>
+        </translate>
     </frontend>
 </config>
